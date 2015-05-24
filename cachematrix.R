@@ -13,7 +13,9 @@
 	## 2. get the matrix
 	## 3. set the inverse
 	## 4. get the inverse
-	## these elements are similar to our example.
+	## these elements are similar to our example.  Note: '<<-' assigns
+	## a value to an object in the environment that different from
+	## our current environment.  
 
 makeCacheMatrix <- function(x = matrix()) {
 	i <- NULL
@@ -33,6 +35,7 @@ makeCacheMatrix <- function(x = matrix()) {
 ## This function is used to compute the inverse and cache the result
 ## of the makeCacheMatrix function above.  It does it in an optimal way
 ## by skipping the computations that have been calculuated already.
+##
 
 cacheSolve <- function(x, ...) {
     i <- x$getinverse
